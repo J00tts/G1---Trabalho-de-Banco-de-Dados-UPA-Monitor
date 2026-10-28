@@ -1,0 +1,27 @@
+erDiagram
+    RESUMO_MONITORAMENTO ||--o{ MONITORAMENTO_UNIDADE : agrupa
+    UNIDADE_SAUDE ||--o{ MONITORAMENTO_UNIDADE : possui
+
+    RESUMO_MONITORAMENTO {
+        int id_resumo PK
+        datetime data_hora_coleta
+        int total_aguardando
+        int casos_criticos
+        int upas_online
+        int total_atendimentos
+    }
+
+    UNIDADE_SAUDE {
+        int id_unidade PK
+        string nome_unidade
+        string tipo_unidade
+        boolean status_online
+    }
+
+    MONITORAMENTO_UNIDADE {
+        int id_monitoramento_unidade PK
+        int id_resumo FK
+        int id_unidade FK
+        int aguardando_atendimento
+        datetime data_hora_coleta
+    }
