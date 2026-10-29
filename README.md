@@ -1,3 +1,7 @@
+flowchart LR
+    A[Início] --> B{Processo}
+    B -->|Sim| C[Resultado A]
+    B -->|Não| D[Resultado B]
 # G1---Trabalho-de-Banco-de-Dados-UPA-Monitor
 Grupo 16: Celso, José, Winnicius
 erDiagram
